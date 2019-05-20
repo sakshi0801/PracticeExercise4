@@ -4,13 +4,25 @@
  * This program is used to test if the given input is transposed
  */
 
+import org.junit.AfterClass;
+import org.junit.BeforeClass;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
 
 public class ReverseStringTest {
 
-    ReverseString rs=new ReverseString();
+    private static ReverseString rs;
+
+    @BeforeClass
+    public static void setup(){
+        rs=new ReverseString();
+    }
+
+    @AfterClass
+    public static void teardown(){
+        rs=null;
+    }
 
     @Test
     public void showReverseString()

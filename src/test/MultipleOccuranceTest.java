@@ -4,13 +4,23 @@
  * This program is used to test every index where the matching string is present in given input
  */
 
+import org.junit.AfterClass;
+import org.junit.BeforeClass;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
 
 public class MultipleOccuranceTest {
+    private static MultipleOccurance mo;
 
-    MultipleOccurance mo=new MultipleOccurance();
+    @BeforeClass
+    public static void setup() {
+        mo=new MultipleOccurance();
+    }
+    @AfterClass
+    public static void teardown() {
+        mo=null;
+    }
 
     @Test
     public void searchMulti()

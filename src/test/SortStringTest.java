@@ -3,14 +3,25 @@
  * date- 16/05/19
  * This program is used to test if the given input is sorted and return the list of words
  */
+import org.junit.AfterClass;
+import org.junit.BeforeClass;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
 
 public class SortStringTest {
 
-    SortString ss=new SortString();
+    private static SortString ss;
 
+    @BeforeClass
+    public static void setup(){
+        ss=new SortString();
+    }
+
+    @AfterClass
+    public static void teardown(){
+        ss=null;
+    }
     @Test
     public void showSortedResultTest()
     {

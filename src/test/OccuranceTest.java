@@ -4,13 +4,27 @@
  * This program is used to test the number of occurance of the matching character in given input
  */
 
+import org.junit.AfterClass;
+import org.junit.BeforeClass;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
 
 public class OccuranceTest {
 
-    Occurance oc=new Occurance();
+    private static Occurance oc;
+
+    @BeforeClass
+    public static void setup()
+    {
+        oc=new Occurance();
+    }
+
+    @AfterClass
+    public static void teardown()
+    {
+        oc=null;
+    }
 
     @Test
     public void numberOfTimesAOccur(){
